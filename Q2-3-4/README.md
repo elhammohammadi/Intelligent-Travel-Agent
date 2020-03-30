@@ -22,7 +22,9 @@ The model was compared with two baseline models:
 
 We assume that the previous search sessions for a user (if available) can be informative in the prediction of the potential next city/cities. As a result, when preparing the dataset, we made a user-based collection, in which the input samples are the whole history of a user, having each two consecutive sessions separated with an identifier, called _SOS_ (Separator Of Sessions), which is also the first and the last element within each user sequence.
 
-We also followed the assumption that a successful prediction of a sequence is dependent on successful prediction of the immediate next element, as we know that an error from one prediction can propagate to the next ones. As a result, when training and testing the model, we focused on the performance of the prediction for the next city.
+We also followed the assumption that a successful prediction of a sequence is dependent on successful prediction of the immediate next element, as we know that an error from one prediction can propagate to the next ones. As a result, when training and testing the model, we focused on the performance of the prediction for the next city. The figure below shows a sample input and output for a given user, whose history is composed of three different sessions. As an example, at the first time-step, only _SOS_ is fed to the model and the goal is to predict _Jacksonville FL_ . At the next step, _Jacksonville FL_ is the input to the model, and _Saint Petersburg FL_ is the expected output. This process continues until the model reaches _New York NY_ which is the last city in the last session, where it should predict _SOS_ .
+
+![sample](Figures/sample.png)
 
 
 ### Evaluation Metrics
