@@ -1,0 +1,16 @@
+hidden_type: GRU                # Type of the hidden architecture (RNN, LSTM, GRU)                
+n_hidden: 128                   # Number of hidden units in each layer
+n_layers: 1                     # Number of hidden layers
+embedding_dim: 100              # Size of the embedding output
+dropout: 0.5                    # Dropout probability for the fully-connected layers
+embedding_dropout: 0.0          # Dropout probability for the embedding layer
+use_country: False              # Whether to use country_id as an additional feature
+
+epochs: 100                     # Number of training epochs
+batch_size: 32                  # The mini-batch size
+learning_rate: 0.001            # Learning Rate
+weight_decay: 0.01              # Weight-decay coefficient rate for the optimizer
+clipping: True                  # Whether to use gradient clipping or not
+power: 0.25                     # The discounting power applied to the class-weights
+
+gpu: True                       # Whether to use GPU or not
