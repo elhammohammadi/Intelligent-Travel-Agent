@@ -1,7 +1,7 @@
 matplotlib==3.2.1
 numpy==1.18.2
 pandas==0.25.3
-PyYAML==3.13
+PyYAML==5.4
 scipy==1.4.1
 sklearn==0.22.2
 torch==1.4.0
